@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { StyleSheet, Text, View, TextInput, Image } from "react-native";
+import { StyleSheet, Text, View, TextInput, ImageBackground } from "react-native";
 
 import Forecast from "./Forecast";
 import OpenWeatherMap from "./open_weather_map";
@@ -31,7 +31,7 @@ class WeatherProject extends Component {
     }
     return (
       <View style={styles.container}>
-        <Image
+        <ImageBackground
           source={require("./flowers.png")}
           resizeMode="cover"
           style={styles.backdrop}
@@ -51,7 +51,7 @@ class WeatherProject extends Component {
             </View>
             {content}
           </View>
-        </Image>
+        </ImageBackground>
       </View>
     );
   }
@@ -61,7 +61,7 @@ const baseFontSize = 16;
 
 const styles = StyleSheet.create({
   container: { flex: 1, alignItems: "center", paddingTop: 30 },
-  backdrop: { flex: 1, flexDirection: "column" },
+  backdrop: { flex: 1, flexDirection: "column", width: "100%"},
   overlay: {
     paddingTop: 5,
     backgroundColor: "#000000",
